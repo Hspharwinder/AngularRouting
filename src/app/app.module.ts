@@ -1,13 +1,21 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-
+import { EmpDetailComponent } from './emp-detail/emp-detail.component';
+import { AbcRoutingModule, nav} from '../app/abc/abc-routing.module';
+ 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent,    
+    EmpDetailComponent,    
+    nav
+  ],
+  imports: [
+    BrowserModule,
+    AbcRoutingModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
